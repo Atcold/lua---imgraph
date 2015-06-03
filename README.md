@@ -1,58 +1,31 @@
-# imgraph: a package to create/manipulate graphs on images
+# ImageGraph package
 
-This package provides standard functions to
-create and manipulate edge-weighted graphs 
-of images: create a graph, segment it, 
-compute its watershed, or its connected
-components...
+This package provides [*Torch*](http://torch.ch/) standard functions to create and manipulate edge-weighted graphs of images: create a graph, segment it, compute its watershed, or its connected components.
 
-## Install 
+## Dependencies
 
-1/ Torch7 is required:
-
-Dependencies, on Linux (Ubuntu > 9.04):
+The [*boost*](http://www.boost.org/) library is required. You can install it with one of the following commands
 
 ``` sh
-$ apt-get install gcc g++ git libreadline5-dev cmake wget libqt4-core libqt4-gui libqt4-dev libboost-all-dev
+apt-get install libboost-all-dev # on Ubuntu
+brew install boost               # on MacOS
 ```
 
-Dependencies, on Mac OS (Leopard, or more), using [Homebrew](http://mxcl.github.com/homebrew/):
+## Installation
 
 ``` sh
-$ brew install git readline cmake wget qt
-```
-
-Then on both platforms:
-
-``` sh
-$ git clone https://github.com/andresy/torch
-$ cd torch
-$ mkdir build; cd build
-$ cmake ..
-$ make
-$ [sudo] make install
-```
-
-2/ Once Torch7 is available, install this package:
-
-``` sh
-$ [sudo] torch-rocks install imgraph
+luarocks install imgraph
 ```
 
 ## Use the library
 
-First run torch, and load imgraph:
-
-``` sh
-$ torch
-``` 
+First run *Torch*, typing `th`, and load imgraph
 
 ``` lua
-> require 'imgraph'
+require 'imgraph'
 ```
 
-Once loaded, tab-completion will help you navigate through the
-library:
+Once loaded, tab-completion will help you navigate through the library:
 
 ``` lua
 > imgraph. + TAB
